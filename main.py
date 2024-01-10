@@ -21,13 +21,19 @@ def Audio_to_text():
     print(result["text"])
 
 
-option=int(input("Press 1 for Speaking or Press 2 for Audio File: "))
-if(option==1):
-    Speech_to_text()
-elif(option==2):
-    Audio_to_text()
-else:
-    print("please enter valid option")
+def main():
+    while True:
+        choice = input("Choose an option:\n1. Transcribe real-time audio\n2.Upload a voice message \n3. Exit\nEnter your choice: ")
+        if choice == "1":
+            Speech_to_text()
+        elif choice == "2":
+            Audio_to_text()
+        elif choice == "3":
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+main()
 
 
 
